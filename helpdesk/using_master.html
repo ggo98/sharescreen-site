@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>DataSet HelpDesk Tool - Remote Control Software</title>
+<meta name="keywords" content="helpdesk,support,assistance,télémaintenance,télé-maintenance,help desk,distance,remote,remotely,control,remote control,remote support,remote helpdesk,dataset helpdesk,dataset remote control,network,administration,admin,administrator,management,windows,vista,2000,2003,XP,,dataset,netreport,télécharger,téléchargement,download" />
+<meta name="description" content="Dataset HelpDesk - Permet de voir et prendre le contrôle du bureau d'un PC sous Windows à distance sur demande de l'utilisateur du PC." />
+<meta name="robots" content="all" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../D7Sheet1.css" />
+<link rel="shortcut icon" type="image/x-icon" href="b.ico" />
+</head>
+<body style="text-align: left">
+	<table><tr><td style="width: 100%"><h1 style="text-align: center">
+		Utilisation de HelpDesk (coté Maitre)</h1></td><td><img alt="en travaux" src="../d7web/gifs/misc/travaux.gif" /></td></tr></table>
+<h2>
+	Démarrage</h2>
+	<h3>
+		Introduction</h3>
+	Une fois téléchargé, l'intégralité du module maitre doit être décompressé dans un répertoire (par
+	exemple C:\helpdesk, ou dans un dossier sur le bureau). 
+	<br />
+	Ensuite, il sufft de lancer
+	le programme
+	<strong>bbcli.exe</strong> depuis ce
+	répertoire.<br />
+	<h3>
+	Mise en disponibilité pour le support</h3>
+	Ceci signifie simplement activer le serveur qui va accepter les requêtes de support
+	qui seront envoyés par des utilisateurs de <strong>HelpDesk</strong>, et se fait en utilisant le menu <strong>Support</strong> / <strong>Disponible pour les requêtes "Support"</strong><br />
+		<center><img alt="Rendre disponible pour les requêtes Suport" title="Rendre disponible pour les requêtes Suport" src="gifs/helpdesk_master_20.jpg" /></center>
+	<br />
+	Une fois l'option activée, l'application va écouter sur le <strong>port TCP 7429</strong>
+	(par défaut).
+	<br />
+	La première fois que vous activez l'option, sous Windows XP SP2 ou VISTA et supérieur,
+	le pare-feu (firewall) deWindows va vous avertir qu'un programme veut activer un serveur TCP/IP<br />
+	<h3>
+		Fenêtre d'avertissement du pare-feu Window<br />
+	</h3>
+	Windows XP SP2, VISTA et supérieur afficheront probablement la fenêtre d'avertissement suivante:<br />
+		<center><img alt="fenêtre d'avertissement" title="fenêtre d'avertissement" src="gifs/helpdesk_master_30.jpg" /></center>
+	<br />
+	Cliquez sur le bouton <strong>Débloquer</strong>.<br />
+	(Note: la manipulation sera légèrement différente si vous utilisez un autre pare-feu
+	que le pare-feu standard livré avec Windows. Vous devez peut être dans ce cas autoriser
+	manuellement l'écoute sur le port TCP 7429; référez vous à la documentation du pare-feu
+	en question pour effectuer cette opération)<br />
+	<h3>
+	Confirmation demandée par l'UAC (User Access Control de Windows VISTA)&nbsp;</h3>
+	<h4>
+	Si vous êtes connecté avec un profil Administrateur<br />
+	</h4>
+	la fenêtre suivante devrait apparaitre:
+	<center><img alt="Validation de l'opération de modification des paramètres du firewall (UAC)" title="Validation de l'opération de modification des paramètres du firewall (UAC)" src="gifs/helpdesk_master_40.jpg" />&nbsp;</center>
+	<br />
+	Choisissez <strong><u>Continuer</u></strong>.
+	<br />
+	<h4>Si vous n'êtes pas connecté avec un profil Administrateur //#TODO: USE FIREWALL
+		SCREEN SHOT</h4>
+	la fenêtre suivante devrait apparaitre:
+	<center><img alt="Validation de l'opération de copie (UAC)" title="Validation de l'opération de copie (UAC)" src="gifs/helpdesk_151.jpg" />&nbsp;</center>
+	Choisissez l'un des utilisateurs de type <strong>Administrateur</strong> présenté
+	dans la liste, saisissez le <strong>mot de passe, </strong>et cliquez sur <strong>OK</strong>.&nbsp;<br />
+	<h2>
+		Réception d'une demande de support</h2>
+	<h3>
+		Connaitre l'adresse IP à donner à la personne qui va demander du support</h3>
+	L'utilisateur qui demande du support doit connaitre l'adresse IP à saisir dans la
+	<a href="using.html#helpdeskquery_dlg">fenêtre de demande de support de <strong>HelpDesk</strong></a>
+	(vous devrez donc la lui communiquer par EMail ou par téléphone par exemple).<br />
+	Afin de connaitre votre adresse IP publique, vous pouvez utiliser IPCONFIG dans
+	une invite de commande, ou plus simplement un site Web, tel<br />
+	<a target="_blank" href="http://www.whatismyip.fr/">http://www.whatismyip.fr/</a>&nbsp;<br />
+	ou <a target="_blank" href="http://whatismyip.com/">http://whatismyip.com/</a><br />
+	Notez que votre adresse IP risque de changer au moins une fois par jour si vous
+	ne disposez pas d'une IP fixe.<br />
+	<h3>
+		Réception d'une demande de support</h3>
+	Une fois que l'utilisateur qui demande du support&nbsp; a saisi l'adresse IP que
+	vous lui avez communiquée dans la <a href="using.html#helpdeskquery_dlg">fenêtre de
+		demande de support de <strong>HelpDesk</strong></a>, puis cliqué sur OK,<br />
+	la connexion s'établit entre le PC de l'utilisateur et votre machine.<br />
+	Une &nbsp;fenêtre de ce type doit apparaitre sur votre bureau:<center><img alt="Réception d'une demande de support" title="Réception d'une demande de support" src="gifs/helpdesk_master_50.jpg" />&nbsp;</center>
+	Répondez <strong>Oui</strong> afin de confirmer la connexion avec l'utilisateur. 
+	<br />
+	Le bureau distant de l'utilisateur doit alors apparaitre en quelques secondes. 
+	<br />
+	<h2>
+		Prendre le controle de la machine distante</h2>
+	Il suffit de cliquer sur le l'image représentant une souris (<img alt="Prendre le controle de la machine distante" title="Prendre le controle de la machine distante" src="gifs/helpdesk_master_61.jpg" />) dans la barre d'icones
+	de l'application:<br />
+	<center><img alt="Prendre le controle de la machine distante" title="Prendre le controle de la machine distante" src="gifs/helpdesk_master_60.jpg" />&nbsp;</center>
+	<h2>
+		Aide Technique</h2>
+	Vous pouvez nous contacter par mail:<br />
+	<a href="mailto:DataSet HelpDesk Support<datasethelpdesk@orange.fr>?subject=Question concernant DataSet HelpDesk / Remote Control">DataSet HelpDesk Support</a><br />
+	<h2>
+		Liens</h2>
+	<a href="..">Page principale</a><br />
+	<a target="_blank" href="http://www.dataset.fr">DATASET</a><br />
+	<a target="_blank" href="http://www.net-report.net">NETREPORT</a><br />
+
+</body>
+</html>

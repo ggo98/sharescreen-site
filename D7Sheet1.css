@@ -1,0 +1,1314 @@
+/* -------------------------------------------------------- */
+/* 						D7Sheet1.css									*/
+/*  All styles for html pages in DataSet Web Server			*/
+/* -------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------- */
+/* 	Styles for all documents													*/
+/* ----------------------------------------------------------------- */
+
+LI.wmu
+{
+    list-style-image: url(d7web/gifs/button/bullet.gif);
+    /*LIST-STYLE: url(/d7web/gifs/select/wmusm.gif)*/
+	/*line-height    : 2em;*/
+}
+
+body 
+{
+	font-family: arial;
+	font-size: 12px;
+	line-height: 1.5;
+	padding: 0;
+	margin-top: 0px;
+	margin-left: 10px;
+	margin-right: 0px; /* see  frame behaviour (frame.htm) with scroll and right margin */
+	margin-bottom: 10px; 
+	background-color: #F2F5FF;
+	border: 0;
+}
+
+div 
+{
+	background-color: transparent;
+}
+
+h2 {
+	font-family: arial;
+	font-size: 14px;
+	color: #fff;
+	margin: 0px;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	display: block;
+	background-color: #6E92FD;
+	text-align: left;
+	height: 26px;
+}
+
+h3 {
+	font-family: arial;
+	font-size: 14px;
+	color: #6E92FD;
+	margin: 0px;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	display: block;
+	xxxbackground-color: #6E92FD;
+	text-align: left;
+	xheight: 26px;
+}
+
+h4 {
+	font-family: arial;
+	font-size: 12px;
+	color: #0;
+	margin: 0px;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	display: block;
+	xxxbackground-color: #6E92FD;
+	text-align: left;
+	xheight: 26px;
+}
+
+p, T2 TD {
+	font-family: arial;
+	font-weight: normal;
+	font-size: 12px;
+	padding: 0;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+
+/* ----------------------------------------------------------------- */
+/* 	Styles for parameter pages												*/
+/* ----------------------------------------------------------------- */
+
+/* Parameter title */
+td.wstdparameter 
+{
+	vertical-align: middle;
+	font-family: arial;
+	font-size: 11px;
+}
+
+/* input for parameter value*/
+input.wsparamvalue 
+{
+	font-family: arial;
+	font-size: 11px;
+	width: 130px;
+	behavior : url(/d7web/style/nrkeyfilter.htc);
+}
+
+/* combo for format export */
+select.formatselect 
+{
+	width: 130px;
+	font-family: arial;
+	font-size: 11px;
+}
+
+input.RunButton
+{
+	height: 21px;
+	font-family: arial;
+	font-size: 12px;
+}
+
+/* -------------------------------------------------------------------- */
+/* 	Styles for dialogs asking values for query or report parameters	*/
+/* -------------------------------------------------------------------- */
+
+/* list of possible values for the parameter */
+select.wsparamlist 
+{
+	font-family: arial;
+	font-size: 11px;
+	width: 80%;
+	height: 90%;
+	margin-top: 20px;
+}
+
+/* ----------------------------------------------------- */
+/* 					Title bar style								*/
+/* ----------------------------------------------------- */
+
+/* You can change the logo here*/
+a.logo
+{
+	background-image: url('/d7web/gifs/images/logo_part1.png');
+	background-position: 0px 0px;
+	background-repeat: no-repeat ;
+	width: 463px;
+	height: 110px;
+}
+
+body.titlebar
+{
+	margin: 0px 0px 0px 10px;
+	width: 100%;
+	padding : 0;
+	padding-right: 15px;
+	overflow: hidden;
+}
+
+div.header
+{
+	width: 100%;
+	margin: 10px 10px 0px 0px;
+	padding: 0;
+	overflow: hidden;
+}
+
+div.header table
+{
+	padding: 0;
+	margin: 0;
+	wrap : off;
+}
+
+td.titlebar
+{
+	background-image: url('/d7web/gifs/images/logo_part2.png');
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-right: 10px;
+}
+	
+div.header h2 
+{
+	text-align: right;
+	font-family: arial;
+	font-size: 18px;
+	background-color: transparent;
+	border-bottom: none;
+	color: #000;
+}
+
+div.header img
+{
+	vertical-align:middle; /* if we put several img in the title bar they are centered */
+}
+
+/* ----------------------------------------------------- */
+/* 					Search box style								*/
+/* ----------------------------------------------------- */
+
+div.searchBox 
+{
+	font-family: arial;
+	font-size: 10px;
+	align: left;
+	float: right;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+}
+
+
+/* -------------------------------------------------------- */
+/* 						Info box style									*/
+/* -------------------------------------------------------- */
+
+div.infoBox 
+{
+	width: 100%;
+	height: 100%;
+	float: none;
+	margin: 0px 0px 0px 0px;
+	border: 1 solid gray;
+	color: #000;
+	background-color: white;
+	align: right;
+}
+
+div.infobox h3
+{
+	margin: 0;
+	padding: 2px;
+	padding-left: 5px;
+}
+
+div.infobox TD.title
+{
+	font-family: arial;
+	font-size: 14px;
+	font-weight:bold;
+	color: #fff;
+	backgrounbd-color: #6E92FD;
+	text-align: left;
+}
+
+div.infoBox p
+{
+	font-family: arial;
+	font-weight: normal;
+	font-size: 12px;
+	padding: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+
+/* -------------------------------------------------------- */
+/* 					Error box styles 									*/
+/* -------------------------------------------------------- */
+
+div.errorBox 
+{
+	width: 100%;
+	height: 100%;
+	clear: none;
+	margin: 0px 10px 0px 0px;
+	border: 1 solid gray;
+	color: #000;
+	background-color: #f0f8ff;
+	align: right;
+}
+
+div.errorBox h3
+{
+	height: 22px;
+	background-image: url('/d7web/gifs/images/error.gif');
+	background-position: 2px;
+	background-repeat: no-repeat ;
+	margin: 0;
+	padding: 2px;
+	padding-left: 25px;
+}
+
+div.errorBox p
+{
+	font-family: arial;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+h3.error 
+{
+	height: 22px;
+	background-image: url('/d7web/gifs/images/error.gif');
+	background-position: 2px;
+	background-repeat: no-repeat ;
+	margin: 0;
+	padding: 2px;
+	padding-left: 25px;
+}
+
+
+/* -------------------------------------------------------- */
+/* 					Login box styles									*/
+/* -------------------------------------------------------- */
+
+div.loginbox 
+{
+	width: 320px;
+	clear: left;
+	position: top;
+	border: 1 solid gray;
+	color: #000;
+	margin: 0px 10px 10px 0px;
+	text-align: right;
+	background-color: #E0E8FE;
+}
+
+div.loginbox h3 
+{
+	height: 22px;
+	margin: 0;
+	padding: 0px;
+	padding-left: 5px;
+}
+
+div.loginbox p, div.loginbox table, div.loginbox tr, div.loginbox td 
+{
+	padding: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	font-family: arial;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+
+/* -------------------------------------------------------- */
+/*						Main menu on the left							*/
+/* -------------------------------------------------------- */
+
+div.menuMain 
+{
+	width: 100%;
+	height: 100%;
+	border-top : 1 solid silver;
+	border-left : 1 solid silver;
+	border-right : 1 solid black;
+	border-bottom : 1 solid black;
+	color: #000;
+	margin: 0;
+	font-family: arial;
+	padding: 0;
+	background-color: #E0E8FE;
+	overflow-x : auto;
+	overflow-y : auto;
+}
+
+div.menuMain h1 
+{
+	font-size: 14px;
+	padding: 0;
+}
+
+div.menuMain ul, li, p 
+{	
+	padding: 0;
+	margin: 0;
+	margin-bottom: 0;
+	border: 0;
+	margin: 7px;
+	margin-left: 15px;
+	font-family: arial;
+	font-size: 12px;
+	line-height: 1.2;
+	text-align: justify;	
+}
+
+div.menuMain a 
+{
+	color: #000;
+}
+
+div.menuMain a:link 
+{
+}
+
+div.menuMain a:hover 
+{ 
+	color : #0000FF;
+}
+
+div.menuMain a:selected 
+{ 
+	color: #ffffff
+}
+
+div.menumain h3, div.menumain h2 
+{
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	margin: 0px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-top: 3px;
+}
+
+
+/* -------------------------------------------------------- */
+/*			Menu List (displayed on browsmnu.htm page)			*/
+/* 	Style of menu list and menu items and sub-items			*/
+/* -------------------------------------------------------- */
+
+div.menulist 
+{
+	border: 1 solid gray;
+	background-color: white;
+	height: 100%;
+	width:100%;
+	padding : 0px;
+	overflow-x : auto; 
+	overflow-y : auto;
+}
+
+div.menulist h1, th.title
+{
+	font-family: arial;
+	font-size: 12px;
+	background-color: #6E92FD;
+	color: white;
+	margin: 0;
+	padding: 2px;
+	text-align:  left;
+}
+
+div.menulist h2 
+{
+	font-family: arial;
+	font-size: 12px;
+	font-weight: normal;
+	background-color: #f0f8ff;
+	color: black;
+	border: 0;
+}
+
+div.menulist LI, div.menulist A 
+{ 
+	font-family: arial; 
+	color: #000;
+}
+
+div.menuitem 
+{
+	border: 1 solid gray;
+	margin: 0;
+	background-color: white;
+	height: 100%;
+	width:100%;
+	padding : 0px;
+	overflow-x : auto; 
+	overflow-y : auto;
+}
+
+div.menuitem h1 
+{
+	font-family: arial;
+	font-size: 12px;
+	background-color: #6E92FD;
+	color: white;
+	margin: 0;
+	padding: 2px;
+}
+
+div.menuitem h2
+{
+	font-family: arial;
+	font-size: 11px;
+	background-color: #C7D5FD;
+	color: black;
+	margin-left: 3px;
+	margin-right: 3px;
+	padding-left: 4px;
+	padding-top: 1px;
+	height: 19px;
+}
+
+div.menuitem li
+{
+	margin: 0;
+	padding: 0;
+}
+
+/* list styles */
+LI.login
+{
+	LIST-STYLE: url(/d7web/gifs/button/bullet.gif)
+	margin: 2px;
+}
+
+.MMenuTitle
+{
+	margin: 0px;
+}
+
+H2 MMenuTitle
+{
+	height: 30px;
+}
+
+.MMenuSystem
+{
+	// No gif for eSafe Reporter
+	/*background-image: url('/d7web/gifs/images/cnx.gif');
+	background-position: 2px;
+	background-repeat: no-repeat ;
+	margin-left: 15px;
+	padding-left: 20px;*/
+}
+
+.MMenuMenus
+{
+	// No gif for eSafe Reporter
+	/*background-image: url('/d7web/gifs/select/wmusm.gif');
+	background-position: 2px;
+	background-repeat: no-repeat ;
+	margin-left: 15px;
+	padding-left: 20px;*/
+}
+
+.imgshowidMMenu
+{
+	margin-right: 0px;
+}
+
+xxxxLI.wmu
+{
+    LIST-STYLE: url(/pub/d7web/gifs/button/bullet.gif)
+    /*LIST-STYLE: url(/d7web/gifs/select/wmusm.gif)*/
+	line-height    : 2em;
+}
+
+LI.wmufolder
+{
+    LIST-STYLE: url(/d7web/gifs/images/folder.gif)
+}
+
+LI.wmuparentfolder
+{
+    LIST-STYLE: url(/d7web/gifs/computer/parent.gif)
+}
+
+LI.wmuwfs
+{
+    LIST-STYLE: url(/d7web/gifs/select/qrysm.gif)
+}
+
+LI.wmuwfr
+{
+    LIST-STYLE: url(/d7web/gifs/select/repsm.gif)
+}
+
+LI.wmustaticwfr
+{
+    LIST-STYLE: url(/d7web/gifs/select/repstsm.gif)
+}
+
+LI.wmuwfd
+{
+    LIST-STYLE: url(/d7web/gifs/select/ebissm.gif)
+}
+
+LI.wmuwfdvision
+{
+    LIST-STYLE: url(/d7web/gifs/vision/ebisvis.gif)
+}
+
+LI.wmuurl
+{
+    LIST-STYLE: url(/d7web/gifs/computer/urlsm.gif)
+}
+
+LI.wmufile
+{
+    LIST-STYLE: url(/d7web/gifs/computer/filesm.gif)
+}
+
+LI.wmusql
+{
+    LIST-STYLE: url(/d7web/gifs/select/sqlsm.gif)
+}
+
+LI.wmuquery
+{
+    LIST-STYLE: url(/d7web/gifs/select/d7qrysm.gif)
+}
+
+LI.wmureport
+{
+    LIST-STYLE: url(/d7web/gifs/select/d7repsm.gif)
+}
+
+LI.wmucube
+{
+    LIST-STYLE: url(/d7web/gifs/select/d7cubsm.gif)
+}
+
+LI.wmustaticcube
+{
+    LIST-STYLE: url(/d7web/gifs/select/cubstsm.gif)
+}
+
+LI.wmustaticquery
+{
+	LIST-STYLE: url(/d7web/gifs/select/qrystsm.gif)
+}
+
+LI.wmustaticreport
+{
+	LIST-STYLE: url(/d7web/gifs/select/repstsm.gif)
+}
+
+LI.wmuvision
+{
+	LIST-STYLE: url(/d7web/gifs/select/d7vissm.gif)
+}
+
+LI.download
+{
+	LIST-STYLE: url(/d7web/gifs/computer/urlsm.gif)
+}
+
+LI.wmusharedfolder
+{
+	LIST-STYLE: url(/d7web/gifs/images/sharedfolder.gif)
+}
+
+
+
+/* -------------------------------------------------------- */
+/*			Menu Path (displayed on browsmnu.htm page)			*/
+/* -------------------------------------------------------- */
+
+div.D7MenuPath
+{
+	text-overflow : ellipsis; 
+	width : 100%;
+	height : 2em;
+	color : #2222FF;
+	background-color: white;
+	padding-left: 10px;
+}
+
+a.D7MenuPathItem
+{
+	font-size: 10px;
+	color : #0000FF;
+}
+
+
+/* ----------------------------------------------------- */
+/*			Styles for SQL editor									*/
+/* ----------------------------------------------------- */
+
+body.sql
+{
+	padding :0;
+	margin :0;
+	margin-left : 5px;
+	background-color: #f0f8ff;
+}
+
+body.sql input 
+{
+	background-color: #CAE1FF;
+}
+
+body.sql ul
+{
+	padding :0;
+	margin-left : 15px;
+	margin-right : 0px;
+}
+
+body.sql form
+{
+	padding :0;
+	margin :0;
+}
+
+#submit1
+{
+	margin : 0;
+	padding :0;
+	width : 100%;
+	height : 20px;
+	border : 1px solid gray;
+	background-color: #DDDDff;
+	font-size : 11px;
+	color: black;
+	font-weight : bold;
+}
+
+body.sql h2
+{
+	width : 100%;
+	height : 20px;
+	border : 1px solid gray;
+	margin-top : 7px;
+	background-color: #DDDDff;
+	text-align : center;
+	font-size : 11px;
+	color: black;
+	font-weight : bold;
+	cursor: hand;
+}
+
+body.sql table
+{
+	padding :0;
+	margin :0;
+	margin-top :20px;
+	border : 0;
+	width : 99%;
+}
+
+body.sql td,tr
+{
+	font-size : 11px;
+	padding :0;
+	margin :0;
+}
+
+LI.sqlintable
+{
+	LIST-STYLE: url(/d7web/gifs/select/qrystsm.gif)
+}
+
+LI.sqlinparent
+{
+	LIST-STYLE: url(/d7web/gifs/computer/parent.gif)
+}
+
+
+/* -------------- Tab control style ( for sql editor ) --------------------- */
+
+div.tabctrl 
+{
+	PADDING : 0px; 
+	MARGIN : 0px; 
+	WIDTH: 100%; 
+	border : 0;
+	BACKGROUND-COLOR: transparent;	
+}
+
+div.tabpage 
+{
+	WIDTH: 100%; 
+	HEIGHT : 100%;
+	BACKGROUND-COLOR: #f0f8ff;
+}
+
+DIV.tabpages
+{
+	PADDING: 0px; 
+	MARGIN: 0px; 
+	WIDTH: 100%; 
+	HEIGHT : 100%;
+	BORDER-LEFT: 1px solid silver;
+	BORDER-RIGHT: 1px solid silver;
+	BORDER-BOTTOM: 1px solid silver;
+}
+
+DIV.tabs 
+{
+	border :0;
+	PADDING : 0px; 
+	PADDING-TOP : 5px; 
+	MARGIN: 0px; 
+	WIDTH: 100%; 
+	BACKGROUND-COLOR: transparent;
+}
+
+.Transparent_ms 
+{
+	FONT-SIZE: 0px; 
+	WIDTH: 1px; 
+	HEIGHT: 1px
+}
+
+.LightShadow_ms 
+{
+	FONT-SIZE: 0px; 
+	BACKGROUND: silver
+}
+
+.MediumShadow_ms 
+{
+	FONT-SIZE: 0px; 
+	BACKGROUND: gray
+}
+
+.DarkShadow_ms 
+{
+	FONT-SIZE: 0px; 
+	BACKGROUND: black;
+}
+
+.Tab_ms 
+{
+	BACKGROUND: transparent; 
+	COLOR: buttontext;
+}
+
+.DormantActiveTab_ms 
+{
+	PADDING : 0px; 
+	MARGIN: 0px; 
+	BACKGROUND: #f0f8ff; WIDTH: 80px; 
+	CURSOR: default; 
+	display : inline;
+}
+
+
+/* -------------- For Web Directories  --------------------- */
+
+div.menusharedfolder
+{
+	border: 1 solid gray;
+	background-color: white;
+	height: 100%;
+	width: 100%;
+	padding : 0px;
+	overflow-x : auto; 
+	overflow-y : auto;
+}
+
+div.menusharedfolder table
+{
+	margin-left: 30px;
+	margin-top: 10px;
+}
+
+div.menusharedfolder h1
+{
+	font-family: arial;
+	font-size: 12px;
+	background-color: #6E92FD;
+	color: white;
+	margin: 0;
+	padding: 2px;
+}
+
+div.menusharedfolder th.title
+{
+	font-family: arial;
+	font-size: 12px;
+	background-color: #6E92FD;
+	color: white;
+	margin: 0;
+}
+
+div.menusharedfolder A
+{
+	font-size: 11px;
+	font-family: arial; 
+	color: #000;
+}
+
+tr.gray td
+{
+	font-size: 12px;
+	font-family: arial; 
+	color: gray;
+}
+
+
+td.titlemenu
+{
+	font-family: arial;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+td.queryitem
+{
+	background-image: url(/d7web/gifs/select/d7qrysm.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+td.reportitem
+{
+	background-image: url(/d7web/gifs/select/d7repsm.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+td.pivotitem
+{
+	background-image: url(/d7web/gifs/select/d7cubsm.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+td.cubeitem
+{
+	background-image: url(/d7web/gifs/select/cubestsm.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+td.folderitem
+{
+	background-image: url(/d7web/gifs/images/folder.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+	behavior : url(/d7web/style/fileextension.htc);
+}
+
+td.visionitem
+{
+	background-image: url(/d7web/gifs/images/visionfolder.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+	behavior : url(/d7web/style/fileextension.htc);
+}
+
+td.querygroupitem
+{
+	background-image: url(/d7web/gifs/images/queryfolder.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+td.reportgroupitem
+{
+	background-image: url(/d7web/gifs/images/reportfolder.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+td.pivotgroupitem
+{
+	background-image: url(/d7web/gifs/images/pivotfolder.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+td.cubegroupitem
+{
+	background-image: url(/d7web/gifs/images/cubefolder.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+td.fileitem
+{
+	background-image: url(/d7web/gifs/images/ico_file.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+	behavior : url(/d7web/style/fileextension.htc);
+}
+
+td.Excelitem
+{
+	background-image: url(/d7web/gifs/images/ico_excel.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.Worditem
+{
+	background-image: url(/d7web/gifs/images/ico_word.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.PDFitem
+{
+	background-image: url(/d7web/gifs/images/ico_pdf.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.Htmlitem
+{
+	background-image: url(/d7web/gifs/images/ico_htm.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.Xmlitem
+{
+	background-image: url(/d7web/gifs/images/ico_xml.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.Imgitem
+{
+	background-image: url(/d7web/gifs/images/ico_img.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.urlitem
+{
+	background-image: url(/d7web/gifs/images/ico_htm_lnk.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.shortcutvisionitem
+{
+	background-image: url(/d7web/gifs/images/ico_vision_lnk.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.WfvItem
+{
+	background-image: url(/d7web/gifs/images/ico_wfv.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.WfdItem
+{
+	background-image: url(/d7web/gifs/images/ico_wfd.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.titlemenu
+{
+	font-family: arial;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+td.lnkfolderitem
+{
+	background-image: url(/d7web/gifs/images/lnkfolder.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+td.lnkvisionitem
+{
+	background-image: url(/d7web/gifs/images/lnkvisionfolder.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+td.lnkfileitem
+{
+	background-image: url(/d7web/gifs/images/ico_file_lnk.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+	behavior : url(/d7web/style/fileextension.htc);
+}
+
+td.lnkExcelitem
+{
+	background-image: url(/d7web/gifs/images/ico_excel_lnk.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.lnkWorditem
+{
+	background-image: url(/d7web/gifs/images/ico_word_lnk.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.lnkPDFitem
+{
+	background-image: url(/d7web/gifs/images/ico_pdf_lnk.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.lnkHtmlitem
+{
+	background-image: url(/d7web/gifs/images/ico_htm_lnk.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.lnkXmlitem
+{
+	background-image: url(/d7web/gifs/images/ico_xml_lnk.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.lnkImgitem
+{
+	background-image: url(/d7web/gifs/images/ico_img_lnk.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.lnkWfvItem
+{
+	background-image: url(/d7web/gifs/images/ico_wfv_lnk.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.lnkWfdItem
+{
+	background-image: url(/d7web/gifs/images/ico_wfd_lnk.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.lnkurlitem
+{
+	background-image: url(/d7web/gifs/images/ico_htm_lnk.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+td.CubItem
+{
+	background-image: url(/d7web/gifs/images/ico_excel.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+
+
+table.menu a
+{
+	font-family: arial;
+	font-size: 12px;
+}
+
+/* -------------- For Task ------------------------ */
+.RunButton2 
+{
+	font-family: arial;
+	font-weight: normal;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #6E92FD;
+	BORDER: thin outset #6E92FD;
+}
+
+
+/* -------------- For Browser  --------------------- */
+
+.RunButton3
+{
+	font-family: arial;
+	font-weight: normal;
+	font-size: 12px;
+	color: black;
+}
+img.imgfilename
+{
+	cursor: hand;	
+}
+
+
+td.filename
+{
+	font-family: arial;
+	font-size: 11px;
+	cursor: hand;	
+}
+
+input.filename
+{
+	font-family: arial;
+	font-size: 11px;
+	border:0;
+	margin:0;
+	indent:0;
+	background-color: transparent;
+	cursor: hand;
+}
+
+.Dotted
+{
+	DISPLAY: inline;
+	BACKGROUND-IMAGE: url(/d7web/gifs/scheduler/lined.gif);
+	BACKGROUND-POSITION: 0px -4px
+	VERTICAL-ALIGN: bottom;
+	font-family: arial;
+	font-size: 12px;
+	HEIGHT: 18px;
+}
+
+td.Dotted a
+{
+	background-color: white;
+}
+
+div.clBrowseDir
+{
+	left: 0px;
+	margin-top: 0px;
+	background-color: white;
+	width:100%;
+	height:100%;
+	border-style:ridge;
+	border-width:2;
+	overflow-y: auto;
+	overflow-x:hidden;
+}
+
+input.label
+{
+	font-family: arial;
+	font-size: 11px;
+	font-weight: bold;
+	border:0;
+	background-color: transparent;
+}
+
+/* -------------- For Adding Shortcuts  --------------------- */
+
+div.shortcutinfo 
+{
+	background-image: url(/d7web/gifs/images/info.gif);
+	background-position: 2px 2px;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	float: none;
+	padding-left:20px;
+	font-family: arial;
+	font-weight: normal;
+	font-size: 12px;
+	border: 1 solid silver;
+	color: #000;
+	background-color: white;
+	align: center;
+	padding-top:2px;
+}
+
+div.clParamList
+{
+	left: 0px;
+	margin-top: 0px;
+	background-color: white;
+	width:100%;
+	height:100%;
+	border-style:ridge;
+	border-width:2;
+	overflow-y: auto;
+	overflow-x:hidden;
+}
+
+input.param, table.param
+{
+	font-family: arial;
+	font-size: 12px;
+	font-weight: normal;
+	border:0;
+	background-color: transparent;
+	align:left;
+}
+
+LI.wmu a, LI.wmufolder a, LI.wmuparentfolder a, LI.wmuwfs a, LI.wmuwfr a,
+LI.wmustaticwfr a, LI.wmuwfd a, LI.wmuwfdvision a, LI.wmuurl a, LI.wmufile a,
+LI.wmusql a, LI.wmuquery a, LI.wmureport a, LI.wmucube a, LI.wmucube a, 
+LI.wmustaticcube a, LI.wmustaticquery a, LI.wmustaticreport a, LI.wmuvision a,
+LI.download a, LI.wmusharedfolder a, DIV.D7MenuPath a,
+table.menu a
+{
+	behavior: url(/d7web/style/saveLastUrl.htc);
+}

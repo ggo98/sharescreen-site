@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>HelpDesk (Master Page)</title>
+<meta name="keywords" content="outils windows,windows tools,helpdesk,smallrouter,scanport,support,assistance,help desk,distance,remote,remotely,control,remote control,remote support,remote helpdesk,dataset helpdesk,dataset remote control,network,administration,admin,administrator,management,windows,vista,2000,2003,XP,dataset,netreport,télécharger,téléchargement,download" />
+<meta name="description" content="Main - Windows Tools" />
+<meta name="robots" content="all" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../D7Sheet1.css" />
+<link rel="shortcut icon" type="image/x-icon" href="b.ico" />
+<script language="javascript">
+
+////////////////////////////////////////////////////////////////////////////
+function show_props(obj, objName) 
+////////////////////////////////////////////////////////////////////////////
+{   
+	if (typeof(objName) == "undefined")
+	{
+		objName="Exception";
+	}
+	var result = "";
+	for (var i in obj)  
+	{      
+		if(obj[i] == null)
+			result += objName + "." + i + " = null\n";
+		else
+			result += objName + "." + i + " = " + obj[i] + "\n";
+	}   
+	return result; 
+}
+
+////////////////////////////////////////////////////////////////////////////
+function resizeOCX()
+////////////////////////////////////////////////////////////////////////////
+{
+	/*document.getElementById("_DM_d2").style.width=1+"px"; // sinon Ã§a marche pas dans IE6
+	progBar(g_nDone, g_nTotal, document.getElementById("_DM_empty").clientWidth);
+	progBar(g_nDone, g_nTotal, document.getElementById("_DM_empty").clientWidth);
+		// 2 fois, sinon Ã§a marche pas dans Mozilla (sauf si on fait le width=1px, et comme il le faut pour IE6...)
+		*/
+	var w = document.documentElement.clientWidth;
+	var h = document.documentElement.clientHeight;
+	var stretch = document.getElementById("stretch")
+	if (!stretch.checked)
+	{
+		w = w-40;
+		h = h-40;
+//w = 1280;
+//h = 800;
+	}
+	else
+	{
+		w = w-20;
+		h = h-20;
+	}
+	
+	document.getElementById("bbcli").style.width=(w)+"px";
+	document.getElementById("bbcli").style.height=(h)+"px";
+}
+
+////////////////////////////////////////////////////////////////////////////
+function TakeControl() 
+////////////////////////////////////////////////////////////////////////////
+{
+	try
+	{
+		var takecontrol = document.getElementById("takecontrol")
+		if (takecontrol.checked)
+		{
+			bbcli.TakeControl(true);
+		}
+		else
+		{
+			bbcli.TakeControl(false);
+		}
+	}
+	catch(e)
+	{
+		alert(show_props(e));
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////
+function Connect()
+////////////////////////////////////////////////////////////////////////////
+{
+	try
+	{
+		bbcli.ConnectDialog();
+		//bbcli.focus();
+	}
+	catch(e)
+	{
+		alert(show_props(e));
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////
+function ShowOptionsMenu()
+////////////////////////////////////////////////////////////////////////////
+{
+	try
+	{
+		bbcli.ShowOptionsMenu();
+		//bbcli.focus();
+	}
+	catch(e)
+	{
+		alert(show_props(e));
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////
+function Stretch() 
+////////////////////////////////////////////////////////////////////////////
+{
+	try
+	{
+		var stretch = document.getElementById("stretch")
+		if (stretch.checked)
+		{
+			bbcli.Stretch(true);
+			bbcli.SetStretchMode(1);
+		}
+		else
+		{
+			bbcli.Stretch(false);
+			bbcli.SetStretchMode(1);
+		}
+		resizeOCX();
+	}
+	catch(e)
+	{
+		alert(show_props(e));
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////
+function EnableHelpDesk() 
+////////////////////////////////////////////////////////////////////////////
+{
+	try
+	{
+		var helpdesk = document.getElementById("helpdesk")
+		if (helpdesk.checked)
+		{
+			bbcli.EnableHelpDesk(true,"");
+		}
+		else
+		{
+			bbcli.EnableHelpDesk(false,"");
+		}
+	}
+	catch(e)
+	{
+		alert(show_props(e));
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////
+function OpenFileExplorer()
+////////////////////////////////////////////////////////////////////////////
+{
+	try
+	{
+		bbcli.OpenFileExplorer();
+	}
+	catch(e)
+	{
+		alert(show_props(e));
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////
+function ToggleFullScreen()
+////////////////////////////////////////////////////////////////////////////
+{
+//	bbcli.focus();
+		// required
+	try
+	{
+		bbcli.ToggleFullScreen();
+	}
+	catch(e)
+	{
+		alert(show_props(e));
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////
+function alertSize() 
+////////////////////////////////////////////////////////////////////////////
+{
+  var myWidth = 0, myHeight = 0;
+  if (typeof( window.innerWidth ) == 'number') 
+  {
+    //Non-IE
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } 
+  else 
+  if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) 
+  {
+    //IE 6+ in 'standards compliant mode'
+    myWidth = document.documentElement.clientWidth;
+    myHeight = document.documentElement.clientHeight;
+  } 
+  else 
+  if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) 
+  {
+    //IE 4 compatible
+    myWidth = document.body.clientWidth;
+    myHeight = document.body.clientHeight;
+  }
+  window.alert( 'Width = ' + myWidth );
+  window.alert( 'Height = ' + myHeight );
+}
+
+////////////////////////////////////////////////////////////////////////////
+function popupWindow(url) 
+////////////////////////////////////////////////////////////////////////////
+{
+  window.open(url,'popupWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,copyhistory=no,width=100,height=100,screenX=150,screenY=150,top=150,left=150')
+}
+
+
+////////////////////////////////////////////////////////////////////////////
+function test()
+////////////////////////////////////////////////////////////////////////////
+{
+//var bbcli = document.getElementById("bbcli");
+bbcli.AboutBox();
+}
+
+</script>
+</head>
+<body border="0" onload="resizeOCX();" onresize="resizeOCX();" style="text-align: left">
+<div id="div_helpcert" style="display:none; ">
+<h3>
+l'OCX requis n'est pas installé. <a target="_blank" href="ocx.htm">SVP cliquer ici pour afficher l'aide pour l'installation du certificat et de l'OCX</a><br />(cette aide concerne la partie utilisateur de HelpDesk, mais s'applique également à la partie maitre en ce qui concerne l'installation du certificat et de l'activeX requis)
+</h3>
+<hr />
+<hr />
+<hr />
+</div>
+<input id="helpdesk" type="checkbox" onclick="EnableHelpDesk(); bbcli.focus();">Enable HelpDesk</input>
+<input id="stretch" type="checkbox" onclick="Stretch(); bbcli.focus();">Stretch</input>
+<input id="takecontrol" type="checkbox" onclick="TakeControl(); bbcli.focus();">Take Control</input>
+<input type="button" value="Toggle Full Screen" onclick="ToggleFullScreen(); bbcli.focus();" />
+<input type="button" value="File Manager" onclick="OpenFileExplorer(); bbcli.focus();" />
+<input type="button" value="More..." onclick="ShowOptionsMenu(); bbcli.focus();" />
+<input type="button" value="Connect" onclick="Connect(); bbcli.focus();" />
+<object border="10" style="overflow:hidden; height:auto" id="bbcli" width="500" classid="clsid:8C9B3BC6-7FDB-11D4-8902-0000B45E9E36" codebase="./helpdesk_master.CAB#version=1,7,1,0"> </object>
+<script language="javascript">
+try
+{
+	if (bbcli.AboutBox)
+		//alert("object is here");
+		;
+	else
+	{
+		div_helpcert.style.display="";
+	/*
+		if (confirm("l'OCX requis n'est pas installé. Voulez vous afficher l'aide pour l'installation du certificat ?\n(cette aide concerne la partie utilisateur de HelpDesk, mais s'applique également à la partie maitre en ce qui concerne l'installation du certificat et de l'activeX requis)"))
+		{
+			//alert("no object //#todo: explain how to install the certificate");
+			//window.open("ocx.htm");
+			popupWindow("ocx.htm");
+		}
+	*/
+	}
+}
+catch(e)
+{
+	//alert("object here 2");
+}
+</script>
+</body>
+</html>

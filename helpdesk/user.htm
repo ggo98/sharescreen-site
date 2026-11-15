@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>HelpDesk (User Page)</title>
+<meta name="keywords" content="outils windows,windows tools,helpdesk,smallrouter,scanport,support,assistance,help desk,distance,remote,remotely,control,remote control,remote support,remote helpdesk,dataset helpdesk,dataset remote control,network,administration,admin,administrator,management,windows,vista,2000,2003,XP,dataset,netreport,télécharger,téléchargement,download" />
+<meta name="description" content="Main - Windows Tools" />
+<meta name="robots" content="all" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../D7Sheet1.css" />
+<link rel="shortcut icon" type="image/x-icon" href="b.ico" />
+<script language="javascript">
+
+////////////////////////////////////////////////////////////////////////////
+function show_props(obj, objName) 
+////////////////////////////////////////////////////////////////////////////
+{   
+	if (typeof(objName) == "undefined")
+	{
+		objName="Exception";
+	}
+	var result = "";
+	for (var i in obj)  
+	{      
+		if(obj[i] == null)
+			result += objName + "." + i + " = null\n";
+		else
+			result += objName + "." + i + " = " + obj[i] + "\n";
+	}   
+	return result; 
+}
+
+////////////////////////////////////////////////////////////////////////////
+function resizeOCX()
+////////////////////////////////////////////////////////////////////////////
+{
+return;
+	/*document.getElementById("_DM_d2").style.width=1+"px"; // sinon ça marche pas dans IE6
+	progBar(g_nDone, g_nTotal, document.getElementById("_DM_empty").clientWidth);
+	progBar(g_nDone, g_nTotal, document.getElementById("_DM_empty").clientWidth);
+		// 2 fois, sinon Ã§a marche pas dans Mozilla (sauf si on fait le width=1px, et comme il le faut pour IE6...)
+		*/
+	var w = document.documentElement.clientWidth;
+	var h = document.documentElement.clientHeight;
+	var stretch = document.getElementById("stretch")
+	if (!stretch.checked)
+	{
+		w = w-40;
+		h = h-40;
+//w = 1280;
+//h = 800;
+	}
+	else
+	{
+		w = w-20;
+		h = h-20;
+	}
+	
+	document.getElementById("bbsrv").style.width=(w)+"px";
+	document.getElementById("bbsrv").style.height=(h)+"px";
+}
+
+////////////////////////////////////////////////////////////////////////////
+function HelpDeskDialog() 
+////////////////////////////////////////////////////////////////////////////
+{
+	try
+	{
+		bbsrv.HelpDeskDialog();
+	}
+	catch(e)
+	{
+		alert(show_props(e));
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////
+function test()
+////////////////////////////////////////////////////////////////////////////
+{
+bbsrv.AboutBox();
+}
+
+</script>
+</head>
+<body border="0" onload="resizeOCX();" onresize="resizeOCX();" style="text-align: left">
+
+<h2>DataSet HelpDesk</h2>
+<div>
+Bienvenue dans la page de demande de support via DataSet HelpDesk. 
+</div>
+<div id="div_checkingactivex" style=""><h3>Vérification de la présence du contrôle OCX requis...</h3></div>
+<div id="div_helpcert" style="display:none; ">
+<h3>
+<hr />
+l'OCX requis n'est pas installé. <a target="_blank" href="ocx.htm">SVP cliquer ici pour afficher l'aide pour l'installation du certificat et de l'OCX</a>
+</h3>
+<hr />
+<hr />
+<hr />
+</div>
+<div id="div_main" style="visibility:hidden">
+SVP Appuyez sur le bouton &quot;Demander du support&quot; afin d&#39;effectuer une demande de support. La 
+personne qui va pouvoir visualiser votre écran, ainsi que prendre le controle de 
+la machine doit vous fournir le nom à saisir dans la fenêtre de demande de 
+support.
+<hr />
+<!--
+<input id="helpdesk" type="checkbox" onclick="EnableHelpDesk();">Enable HelpDesk</input>
+-->
+<input type="button" value="Demander du support" onclick="HelpDeskDialog();" />
+<div id="div_theobject" style="visibility:hidden">
+<object border="0" style="overflow:hidden; display:" id="bbsrv" height="10" width="10" classid="clsid:d930eb0d-b434-4682-a5e5-4c20a2bd4cf8" codebase="./helpdesk.CAB#version=1,7,1,0"> </object>
+</div>
+</div>
+<script language="javascript">
+try
+{
+	if (bbsrv.AboutBox)
+	{
+		div_main.style.visibility="visible";
+		//div_checkingactivex.style.visibility="hidden";
+		div_checkingactivex.style.display="none";
+		
+	}
+	else
+	{
+		div_helpcert.style.display="";
+/*		
+		if (confirm("l'OCX requis n'est pas installé. Voulez vous afficher l'aide pour l'installation du certificat ?"))
+		{
+			//alert("no object //#todo: explain how to install the certificate");
+			window.open("ocx.htm");
+		}
+*/
+	}
+}
+catch(e)
+{
+	// object exists 2
+	div_main.style.visibility="visible";
+	div_checkingactivex.style.visibility="hidden";
+}
+</script>
+</body>
+</html>

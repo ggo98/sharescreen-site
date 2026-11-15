@@ -1,0 +1,9 @@
+<html>
+<body>
+1
+<?php
+ phpinfo();
+?>
+2
+</body>
+</html> 
